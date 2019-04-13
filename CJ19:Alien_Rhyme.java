@@ -57,10 +57,10 @@ public class Main {
                         max += 2;
                         info.put(key.substring(1), 2 + info.get(key.substring(1)));
                     }
-                    if (key.length() > 1 && info.containsKey(key) && !info.containsKey(key.substring(1)) && count > 1) {
+                    if (key.length() > 1 && info.containsKey(key) && !info.containsKey(key.substring(1)) && count > info.get(key) + 1) {
                         max += 2;
                         info.put(key, 2 + info.get(key));
-                    } else if (key.length() > 1 && info.containsKey(key) && info.containsKey(key.substring(1)) && count > 1) {
+                    } else if (key.length() > 1 && info.containsKey(key) && info.containsKey(key.substring(1)) && count >  info.get(key) + 1) {
                         max += 2;
                         info.put(key, 2 + info.get(key));
                         info.put(key.substring(1), 2 + info.get(key.substring(1)));
