@@ -40,7 +40,7 @@ public class Main {
                 outer:
                 for (int i = 0; i < n; ++i) {
                     int colMin = n;
-                    for (int j =0; j < n; ++j) {
+                    for (int j = 0; j < n; ++j) {
                         if (board[j][i] == 'O') {
                             continue outer;
                         } else if (board[j][i] == 'X') {
@@ -81,8 +81,8 @@ public class Main {
                         ++totalSets;
                     }
                     int temp = n;
-                    for (char c : board[ind]) {
-                        if (c == 'X') {
+                    for (int j = 0; j < n; ++j) {
+                        if (board[j][ind] == 'X') {
                             --temp;
                         }
                     }
